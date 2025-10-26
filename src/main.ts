@@ -57,7 +57,6 @@ function sendIssues(owner: string, repo: string, token: string) {
 }
 
 function getIssues(owner: string, repo: string, token: string): Promise<ApiIssue[]> {
-    console.log(`owner: ${owner},\nrepo: ${repo},\ntoken: ${token}`);
     const headers = {
         Accept: "application/vnd.github+json",
         Authorization: `Bearer ${token}`,
