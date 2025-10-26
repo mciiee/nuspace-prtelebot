@@ -24,13 +24,12 @@ function botSetup() {
 }
 
 function formatApiIssues(issuesResponse: ApiIssue[]) {
-    
     const getProto = (issue: ApiIssue) => ({
         author: issue.user.login,
         state: issue.state,
         title: issue.title,
         body: issue.body,
-        url: issue.url
+        url: issue.html_url
     });
 
     let formatedMessage = "Issues:\n";
@@ -71,7 +70,7 @@ function formatWebhookIssue(request: GitHubWebHookIssueRequest) {
         action: request.action,
         author: request.sender.login,
         body: request.issue.body,
-        url: request.issue.url,
+        url: request.issue.html_url,
     };
     let formatedMessage = "";
     for (const [key, value] of Object.entries(proto)) {
