@@ -1,6 +1,6 @@
 {
     "tasks": {
-        "start": "deno run --allow-import --allow-env --allow-net --watch=src/ src/main.ts"
+        "start": "deno run --allow-import --allow-env  --allow-net --allow-write --watch=src/ src/main.ts"
     },
     "imports": {
         "grammyjs": "https://deno.land/x/grammy/mod.ts"
